@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import torch
 
 if __name__ == '__main__':
     print('Hello world')
@@ -7,3 +8,5 @@ if __name__ == '__main__':
     print(k)
     data = pd.DataFrame({'col1': [1,2,3], 'col2': [1,2,3]})
     print(data.head())
+    device = torch.device("cuda")
+    print(device)

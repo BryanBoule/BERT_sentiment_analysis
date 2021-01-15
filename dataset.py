@@ -7,7 +7,7 @@ class BERTDataset:
         self.review = review
         self.target = target
         self.tokenizer = config.TOKENIZER
-        self.max_len = config.MAX_LEN
+        self.max_len = 64
 
     def __len__(self):
         return len(self.review)

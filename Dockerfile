@@ -22,6 +22,10 @@ COPY --chown=user_ubuntu *.* /home/user_ubuntu/app/
 
 # change to user: user
 USER user_ubuntu
+
+RUN mkdir /home/user_ubuntu/input/
+COPY /input/imdb.csv /home/user_ubuntu/input/
+
 RUN cd /home/user_ubuntu/app/ && pip3 install -r requirements.txt
 
 WORKDIR /home/user_ubuntu/app
