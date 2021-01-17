@@ -60,7 +60,7 @@ class BERTBaseUncased(tez.Model):
         return {"accuracy": accuracy}
 
     def forward(self, ids, mask, token_type_ids, targets=None):
-        _, o_2 = self.bert(ids, attention_mask=mask,
+        e, o_2 = self.bert(ids, attention_mask=mask,
                            token_type_ids=token_type_ids)
         b_o = self.bert_drop(o_2)
         output = self.out(b_o)

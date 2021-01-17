@@ -2,7 +2,8 @@ import transformers
 import os
 
 # docker: fetch home directory, in our docker container, its home/user_ubuntu
-HOME_DIR = os.path.expanduser("~")
+# delete Desktop/BERT_sentiment_analysis/ when run docker build
+HOME_DIR = os.path.expanduser("~/Desktop/BERT_sentiment_analysis/")
 
 # maximum number of tokens in a sentence
 MAX_LEN = 512

@@ -8,5 +8,4 @@ if __name__ == '__main__':
     print(k)
     data = pd.DataFrame({'col1': [1,2,3], 'col2': [1,2,3]})
     print(data.head())
-    device = torch.device("cuda")
-    print(device)
+    print(torch.cuda.is_available())
